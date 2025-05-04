@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="Pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
-    <title>Document</title>
+    <title>GestorON</title>
 </head>
 <body>
     <nav class="firt_nav">
@@ -14,7 +14,7 @@
           <li><a class="btn_nav" href="#sobre">Sobre</a></li>
           <li><a class="btn_nav" href="#contato">Contato</a></li>
         </ul>
-        <img class="btn_zapzap" src="IMG/btn_whatsapp.svg">
+        <a href="https://wa.me/5511961857095"><img class="btn_zapzap" src="IMG/btn_whatsapp.svg"></a>
       </nav>
 
       <section>
@@ -23,7 +23,9 @@
               <h1 class="chamariz">Chegou a hora de alavancar<br>suas vendas com um<br>especialista em tráfego pago!</h1>
               <p class="textChamariz">Amplie sua visibilidade online e aumente suas<br>vendas com estratégias personalizadas. Faça<br>seu dinheiro trabalhar para você!</p>
               <div class="btn">
-              <button class="btn_AnaliseGratis"><img src="IMG/Goal.svg" alt="">ANÁLISE GRÁTIS</button> <!--colocar simbulo-->
+                <a href="https://wa.me/5511961857095" target="_blank" class="btn_AnaliseGratis">
+                  <img src="IMG/Goal.svg" alt=""> ANÁLISE GRÁTIS
+                </a>
               </div>
             </div>
             <img class="fotoDavi" src="IMG/img_davi.svg" alt="">
@@ -102,12 +104,12 @@
         </div>
         <br>
         <h5 class="subtitleBeneficios">Não perca tempo e se posicione logo no mercado.</h5>
-        <button id="btn_zapzap_meio">
-          <img src="IMG/zapzapIcon.svg" alt="">FALE COMIGO AGORA!
-        </button>
+        <a href="https://wa.me/5511961857095" target="_blank" id="btn_zapzap_meio">
+          <img src="IMG/zapzapIcon.svg" alt=""> FALE COMIGO AGORA!
+        </a>        
       </section>  <!-- colocar efeitos de blur nessa section depois -->   
       
-      <section>
+      <section id="sobre">
         <div class="totalPublic">
           <img class="imgDaviComblur" src="IMG/img_davi.svg" alt="">
           <div class="textoReuniao">
@@ -117,14 +119,41 @@
               estratégia ideal para aumentar seu faturamento. Marque sua
               chamada de vídeo de onde estiver!</p>
               <br>
-              <button id="btn_zapzap_meio">
-                <img src="IMG/zapzapIcon.svg" alt="">FALE COMIGO AGORA!
-              </button>
+              <button id="btn_zapzap_meio" onclick="window.open('https://wa.me/5511961857095', '_blank')">
+                <img src="IMG/zapzapIcon.svg" alt=""> FALE COMIGO AGORA!
+              </button>              
           </div>
         </div>
       </section>
 
-      <div class="formsEmail">
+      <section class="carrossel-parceiros">
+        <h2>Conheça marcas que acreditaram no meu trabalho</h2>
+
+        <br>
+        <br>
+
+        <div class="carrossel-container">
+          <!--<button class="prev">◀</button>-->
+          
+          <div class="carrossel-track">
+            <a href="https://www.mdsassistencia.com.br/" target="_blank" class="logo-parceira">
+              <img src="IMG/logoMds.avif" alt="Marca 1">
+            </a>
+            <a href="https://alfaflex.com.br/" target="_blank" class="logo-parceira">
+              <img src="IMG/LOGO-ALFA-FLEX (1).jpg" alt="Marca 2">
+            </a>
+            <a href="https://joyclimatizacao.com.br/" target="_blank" class="logo-parceira">
+              <img src="IMG/joyLogo.jpg" alt="Marca 2">
+            </a>
+            <!-- Adicione mais logos conforme necessário -->
+          </div>
+      
+         <!-- <button class="next">▶</button> -->
+        </div>
+      </section>
+      
+      
+      <div id="contato" class="formsEmail">
         <h3 class="titleForms">Pronto para faturar mais? Impulsione seu<br>negócio agora com anúncios estratégicos!</h3>
         <form class="fomularioCorpo" target="_blank" action="https://formsubmit.co/gestoron.emails@gmail.com" method="POST">
           <div class="form-group">
@@ -141,6 +170,7 @@
             <textarea placeholder="  Sua mensagem" class="form-control" name="message" rows="10" required></textarea>
           </div>
           <button type="submit" class="botao-preto">Envie e fature mais!</button>
+          <br>
         </form>
       </div>
 
@@ -148,13 +178,27 @@
         <p class="texto-rodape">Davi Barbosa Nunes © 2025. Todos os direitos reservados.</p>
         <div class="redes-sociais">
           <a href="#" target="_blank"><img src="IMG/icons8-instagram-30.png" alt="Instagram"></a>
-          <a href="#" target="_blank"><img src="IMG/icons8-whatsapp-30.png" alt="WhatsApp"></a>
+          <a href="#" target="_blank"><img src="IMG/icons8-whatsapp-30.png" alt="btn_whatsapp"></a>
           <a href="#" target="_blank"><img src="IMG/icons8-linkedin-30.png" alt="LinkedIn"></a>
           <!-- Adicione mais se necessário -->
         </div>
       </footer>
-      
 
+      <!--<script>
+        const track = document.querySelector('.carrossel-track');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+      
+        let scrollAmount = 0;
+      
+        nextBtn.addEventListener('click', () => {
+          track.scrollBy({ left: 200, behavior: 'smooth' });
+        });
+      
+        prevBtn.addEventListener('click', () => {
+          track.scrollBy({ left: -200, behavior: 'smooth' });
+        });
+      </script> -->
       
 </body>
 </html>

@@ -12,16 +12,18 @@ html, body {
     overflow-x: hidden;
     width: 100%;
   }
-.firt_nav{
+  .firt_nav {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
     padding: 20px;
     background-color: #FFCF06;
-    width: 1366px;
-    height: auto;
+    width: 100%;
+    max-width: 100%;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-}
+  }
+  
 .func_nav{
     display: flex;
     align-items: center;
@@ -34,27 +36,31 @@ html, body {
     text-decoration: none;
     color: black;
 }
-/* pensar em diminuir essa logo*/
-.logo{
-    width: 150px;
-    height: auto;
-    margin-left: 50px;
+
+.logo {
+  width: 120px;
+  height: auto;
+  margin-left: 20px;
 }
-.btn_zapzap{
-    width: 250px;
-    height: auto;
-    margin-right: 50px;
+.btn_zapzap {
+  width: 180px;
+  margin-right: 20px;
 }
-.allPag01{
-    display: flex;
-    margin: 10px;
-    justify-content: center;
+
+.allPag01 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  justify-content: center;
+  gap: 20px;
 }
-.fotoDavi{
-    height: 546px;
-    width: auto;
-    /* rever essa distribuição de tamanho*/
+
+.fotoDavi {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
 }
+
 .chamaPag01{
     height: auto;
     width: auto;
@@ -108,8 +114,8 @@ html, body {
   
   .services {
     display: grid;
-    grid-template-columns: repeat(2, 0fr); /* duas colunas */
-    gap: 20px; /* espaçamento entre os cards */
+    grid-template-columns: repeat(2, 0fr);
+    gap: 20px;
     justify-items: center;
     justify-content: center;
   }
@@ -342,5 +348,252 @@ textarea.form-control {
 
 .redes-sociais img:hover {
   transform: scale(1.1);
+}
+
+.carrossel-parceiras {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.titulo-carrossel {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.carrossel-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 90%;
+  margin: auto;
+}
+
+.carrossel-track {
+  display: flex;
+  flex-wrap: nowrap; /* impede quebra de linha */
+  overflow-x: auto;   /* permite rolagem horizontal */
+  gap: 40px;
+  transition: transform 0.5s ease-in-out;
+  scroll-behavior: smooth; /* opcional: suaviza o scroll */
+}
+
+.carrossel-track::-webkit-scrollbar {
+  display: none;
+}
+.carrossel-track {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.carrossel-track a img {
+  width: 150px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.carrossel-track a img:hover {
+  transform: scale(1.05);
+}
+
+.carrossel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #FFCF06;
+  color: black;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+a {
+  text-decoration: none;
+}
+
+.prev {
+  left: 10px;
+  margin-bottom: 20px; /* espaço abaixo */
+}
+.next {
+  right: 10px;
+  margin-top: 20px; /* espaço acima */
+}
+@media (max-width: 768px) {
+  .carrossel-track {
+    gap: 20px;
+  }
+
+  .carrossel-track a img {
+    width: 100px;
+  }
+}
+
+.logo-parceira {
+  background-color: #cecece; /* cinza claro para contraste */
+  padding: 10px;
+  border-radius: 10px;
+  width: 150px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* sombra leve */
+  transition: transform 0.3s ease;
+}
+
+.logo-parceira:hover {
+  transform: scale(1.05); /* leve efeito ao passar o mouse */
+}
+
+.logo-parceira img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+@media (max-width: 1024px) {
+  .firt_nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .func_nav {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .logo, .btn_zapzap {
+    margin: 10px;
+    width: 120px;
+  }
+
+  .services {
+    grid-template-columns: 1fr; /* só uma coluna */
+  }
+
+  .serviceCard {
+    width: 90%;
+  }
+
+  .fotoDavi {
+    height: auto;
+    width: 90%;
+  }
+
+  .chamariz {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .textChamariz {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .btn_AnaliseGratis {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .titleForms {
+    font-size: 32px;
+  }
+
+  .form-control {
+    font-size: 0.9rem;
+    height: 45px;
+  }
+
+  textarea.form-control {
+    height: 80px;
+    width: 90%;
+  }
+
+  .modeloBeneficio {
+    max-width: 90%;
+  }
+
+  .bgBeneficios h6 {
+    font-size: 14px;
+  }
+
+  .bgBeneficios p {
+    font-size: 12px;
+  }
+
+  .titleReuniao {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .textReuniao {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .totalPublic {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .carrossel-track {
+    gap: 20px;
+  }
+
+  .carrossel-track a img {
+    width: 100px;
+  }
+
+  .logo-parceira {
+    width: 120px;
+    height: 80px;
+  }
+
+  .titleBeneficios,
+  .subtitleBeneficios,
+  #textBeneficios {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .titleForms {
+    font-size: 24px;
+  }
+
+  .textChamariz,
+  .chamariz {
+    font-size: 20px;
+  }
+
+  .btn_AnaliseGratis {
+    font-size: 0.9rem;
+  }
+
+  .serviceCard {
+    height: auto;
+  }
+
+  .textoServices {
+    font-size: 16px;
+  }
+
+  .form-control {
+    height: 40px;
+    font-size: 0.85rem;
+  }
+
+  .bgBeneficios p {
+    font-size: 11px;
+  }
 }
 
